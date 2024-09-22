@@ -12,8 +12,9 @@ import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { P404Component } from './p404/p404.component';
 import { HttpClientModule } from '@angular/common/http';
-// import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
-// import { ContactComponent } from './contact/contact.component';
+import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
+import { ContactComponent } from './contact/contact.component';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -26,15 +27,17 @@ import { HttpClientModule } from '@angular/common/http';
     AboutComponent,
     LoginComponent,
     P404Component,
-    // BreadcrumbsComponent,
-    // ContactComponent
+    BreadcrumbsComponent,
+    ContactComponent,
+    BreadcrumbsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
